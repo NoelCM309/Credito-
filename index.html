@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CrediNoelBank | Plataforma Financiera</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo-box">
+
+<h1>
+<i class="fa-solid fa-chart-line"></i>
+CrediNoelBank
+</h1>
+
+<p>
+Soluciones Financieras Inteligentes
+</p>
+
+</div>
+
+<div class="header-info">
+
+<div class="mini-card">
+<i class="fa-solid fa-shield-halved"></i>
+<span>Seguridad Financiera</span>
+</div>
+
+<div class="mini-card">
+<i class="fa-solid fa-wallet"></i>
+<span>Planeación de Crédito</span>
+</div>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="hero">
+
+<h2>Bienvenido a CrediNoelBank</h2>
+
+<p>
+Consulta escenarios financieros, analiza plazos y obtén una proyección detallada de tu financiamiento.
+</p>
+
+</div>
+
+<div class="card-principal">
+
+<h2>
+<i class="fa-solid fa-file-invoice-dollar"></i>
+Solicitud Financiera
+</h2>
+
+<div class="grid">
+
+<div class="form-group">
+<label>Nombre del Cliente</label>
+<input
+type="text"
+id="cliente"
+placeholder="Ingrese nombre completo">
+</div>
+
+<div class="form-group">
+<label>Importe solicitado (MXN)</label>
+<input
+type="number"
+id="monto"
+value="70000">
+</div>
+
+<div class="form-group">
+<label>Capacidad económica mensual</label>
+<input
+type="number"
+id="ingreso"
+value="30000">
+
+<small>
+El importe aprobado puede variar según la capacidad económica registrada.
+</small>
+
+</div>
+
+<div class="form-group">
+<label>Comisión administrativa (%)</label>
+<input
+type="number"
+id="comision"
+value="4">
+
+<small>
+La comisión se integra al cálculo total.
+</small>
+
+</div>
+
+<div class="form-group">
+
+<label>Plazo financiero</label>
+
+<select id="plazo">
+
+<option value="12">
+12 meses
+</option>
+
+<option value="24">
+24 meses
+</option>
+
+<option value="36" selected>
+36 meses
+</option>
+
+<option value="48">
+48 meses
+</option>
+
+<option value="60">
+60 meses
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Tasa anual (%)</label>
+
+<input
+type="number"
+id="tasa"
+value="25">
+
+<small>
+Tasa referencial sujeta a evaluación.
+</small>
+
+</div>
+
+</div>
+
+<div class="botones">
+
+<button
+class="btn-limpiar"
+onclick="limpiar()">
+
+<i class="fa-solid fa-trash"></i>
+Limpiar
+
+</button>
+
+<button
+class="btn-cotizar"
+onclick="calcular()">
+
+<i class="fa-solid fa-calculator"></i>
+Generar Análisis
+
+</button>
+
+</div>
+
+</div>
+
+<div class="fecha-box">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<span id="fechaActual"></span>
+
+</div>
+
+<div
+id="resumen"
+class="cards">
+
+</div>
+
+<div class="tabla-card">
+
+<div class="titulo-tabla">
+
+<h2>
+
+<i class="fa-solid fa-table"></i>
+
+Proyección Financiera
+
+</h2>
+
+</div>
+
+<div class="tabla-responsive">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Periodo</th>
+
+<th>Saldo Inicial</th>
+
+<th>Amortización</th>
+
+<th>Interés</th>
+
+<th>IVA</th>
+
+<th>Pago</th>
+
+<th>Saldo Final</th>
+
+<th>Interés Acumulado</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tabla">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="notas">
+
+<h2>
+
+<i class="fa-solid fa-circle-info"></i>
+
+Información Relevante
+
+</h2>
+
+<ul>
+
+<li>
+Los valores mostrados son estimaciones financieras para fines informativos.
+</li>
+
+<li>
+La autorización definitiva depende del análisis de perfil económico.
+</li>
+
+<li>
+Las condiciones pueden variar según el plazo seleccionado.
+</li>
+
+<li>
+La comisión administrativa se integra al cálculo total.
+</li>
+
+<li>
+Las proyecciones se generan con base en amortización constante.
+</li>
+
+</ul>
+
+</div>
+
+<div class="footer">
+
+<div>
+
+<h3>CrediNoelBank</h3>
+
+<p>
+Plataforma de análisis financiero y planeación crediticia.
+</p>
+
+</div>
+
+<div>
+
+<p>
+© 2026 Todos los derechos reservados.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
